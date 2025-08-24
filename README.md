@@ -21,6 +21,6 @@ O nome "Jogano" é uma brincadeira com as palavras **"jogando"** e **"organogram
 - **JavaScript**  
 - **HTML & CSS**  
 
-##Desenvolvedora:
+## Desenvolvedora:
 -Yasmin de Camargo Hirt
 
