@@ -1,0 +1,12 @@
+.CampoTexto
+{
+    margin: 24px 0;
+
+}
+.CampoTexto label
+{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 24px;
+    color: black;
+}

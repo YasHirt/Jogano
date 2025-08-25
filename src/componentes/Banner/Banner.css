@@ -1,10 +1,10 @@
 
 .Banner
 {
-    background-color: #6278F7;
+    background-color: #2F80ED;
     text-align: center;
 }
 .Banner img 
 {
-    max-width: 100%;
+    max-width:50%;
 }
