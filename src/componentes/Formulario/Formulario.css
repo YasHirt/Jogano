@@ -1,13 +1,15 @@
-.form-login
-{
-    margin-top: 10px;
+.form-login {
     border: solid #ddd;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.01);
-    border-radius: 15px;
-    padding: 30px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.09);
+    border-radius: 20px;
+    padding: 36px 34px;
     background-color: #F6F6F6;
+    margin-top: 80px;
+    width: 75%;
 }
-.section-login
-{
-    padding: 2rem 10%;
+
+.section-login {
+   display: flex;
+   justify-content: center;
+
 }
