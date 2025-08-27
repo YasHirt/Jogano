@@ -2,7 +2,8 @@ import './Formulario.css'
 import '../CampoTexto/CampoTexto'
 import CampoTexto from '../CampoTexto/CampoTexto';
 import ListaSuspensa from '../ListaSuspensa/ListaSuspensa';
-const Formulario = () => {
+import Botao from '../Botao/Botao';
+
     const jogos = [
         "Xadrez",
         "Damas",
@@ -13,14 +14,20 @@ const Formulario = () => {
         "Baralho"
 
     ]
+
+const Formulario = () => {
+
+    const aoSalvar = () => console.log("Documento salvo")
     return (
         <section className='section-login'>
-            <form className='form-login'>
+            <form className='form-login' onSubmit={aoSalvar} >
                 <h2>Preencha os dados para criar o card do jogador.</h2>
                 <CampoTexto label="Nome" placeholder="Digite seu nome" />
-                {/* <CampoTexto label="Jogo" placeholder="Qual jogo você deseja jogar?" /> */}
                 <CampoTexto label="Imagem" placeholder="Informe o endereço da imagem" />
-                <ListaSuspensa label="Jogos" itens={jogos}/>
+                <ListaSuspensa label="Jogos" itens={jogos} />
+                <Botao>
+                    Criar Botão
+                </Botao>
 
             </form>
         </section>

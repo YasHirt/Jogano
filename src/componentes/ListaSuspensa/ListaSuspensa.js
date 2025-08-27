@@ -1,8 +1,6 @@
 import './ListaSuspensa.css'
 
 const ListaSuspensa = (props) => {
-    console.log(props.itens)
-
     return (
         <div className='ListaSuspensa'>
             <label>{props.label}</label>
