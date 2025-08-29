@@ -19,7 +19,7 @@ const jogos = [
 
 const Formulario = () => {
 
-    const [nome, setNome] = useState('')
+    const [nome, setNome] = useState('') //hooks
     const [imagem, setImagem] = useState('')
     const [lista, setLista] = useState('')
 
@@ -29,15 +29,13 @@ const Formulario = () => {
     }
     
 
-//   props.aoAlterado(e.target.value)
-
     return (
         <section className='section-login'>
             <form className='form-login' onSubmit={aoSalvar} >
                 <h2>Preencha os dados para criar o card do jogador.</h2>
-                <CampoTexto valor={nome} aoAlterado={valorAlterado => setNome(valorAlterado)} label="Nome" obrigatorio={true} placeholder="Digite seu nome" />
-                <CampoTexto valor={imagem} aoAlterado={valor => setImagem(valor)} label="Imagem" placeholder="Informe o endereço da imagem" />
-                <ListaSuspensa valor={lista} aoAlterado={valorAlterado => setLista(valorAlterado)} label="Jogos" obrigatorio={true} itens={jogos} />
+                <CampoTexto valor={nome} aoAlterado={setNome} label="Nome" obrigatorio={true} placeholder="Digite seu nome" />
+                <CampoTexto valor={imagem} aoAlterado= {setImagem} label="Imagem" placeholder="Informe o endereço da imagem" />
+                <ListaSuspensa valor={lista} aoAlterado={setLista} label="Jogos" obrigatorio={true} itens={jogos} />
                 <Botao>
                     Criar Botão
                 </Botao>
