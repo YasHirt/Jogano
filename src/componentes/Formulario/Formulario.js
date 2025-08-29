@@ -17,7 +17,7 @@ const jogos = [
 ]
 
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const [nome, setNome] = useState('') //hooks
     const [imagem, setImagem] = useState('')
@@ -26,6 +26,7 @@ const Formulario = () => {
     const aoSalvar = (e) => {
         e.preventDefault()
         console.log("Documento salvo =>", nome, imagem, lista)
+        props.aoColaboradorCadastrado({nome, imagem, lista}) //envio um objeto literal JS
     }
     
 
