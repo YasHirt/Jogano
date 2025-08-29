@@ -5,8 +5,7 @@ const Jogo = (props) =>
     return (
 
         <section className="sectionJogo">
-            <h1>{props.nome}</h1>
-
+            <h3>{props.nome}</h3>
         </section>
     )
 }
