@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './componentes/Banner/Banner';
 import Formulario from './componentes/Formulario/Formulario';
 import Jogo from './componentes/Jogo/Jogo'
+import CardJogador from './componentes/CardJogador/CardJogador';
 
 const jogos = [
   {
@@ -55,10 +56,11 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario listaDeJogos={jogos} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdcionado(colaborador)} />
+      <Formulario listaDeJogos={jogos.map(jogo => jogo.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdcionado(colaborador)} />
 
       {jogos.map(jogo => <Jogo key={jogo.nome} nome={jogo.nome} corPrimaria={jogo.corPrimaria} corSecundaria={jogo.corSecundaria} />)} 
-
+      
+      <CardJogador/>
     </div>
   );
 }

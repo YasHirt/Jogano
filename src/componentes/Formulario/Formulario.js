@@ -5,18 +5,6 @@ import ListaSuspensa from '../ListaSuspensa/ListaSuspensa';
 import Botao from '../Botao/Botao';
 import { use, useState } from 'react';
 
-const jogos = [
-    "Xadrez",
-    "Damas",
-    "Detetive",
-    "Banco Imobiliário",
-    "RPG",
-    "Monopoly",
-    "Baralho"
-
-]
-
-
 const Formulario = (props) => {
 
     const [nome, setNome] = useState('') //hooks
@@ -36,10 +24,11 @@ const Formulario = (props) => {
                 <h2>Preencha os dados para criar o card do jogador.</h2>
                 <CampoTexto valor={nome} aoAlterado={setNome} label="Nome" obrigatorio={true} placeholder="Digite seu nome" />
                 <CampoTexto valor={imagem} aoAlterado= {setImagem} label="Imagem" placeholder="Informe o endereço da imagem" />
-                <ListaSuspensa valor={lista} aoAlterado={setLista} label="Jogos" obrigatorio={true} itens={jogos} />
+                <ListaSuspensa valor={lista} aoAlterado={setLista} label="Jogos" obrigatorio={true} itens={props.listaDeJogos} />
                 <Botao>
                     Criar Botão
                 </Botao>
+                <h3>Meu teste de variável</h3>
 
             </form>
         </section>
