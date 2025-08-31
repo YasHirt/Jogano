@@ -1,12 +1,11 @@
 .sectionJogo
 {
     text-align: center;
-    background-color: #D9F7E9;
 }
 .sectionJogo h3
 {
     font-size: 2rem;
-    border-bottom: 4px solid #57C278;
+    border-bottom: 4px solid;
     display: inline-block;
     padding-bottom: 3px;
 }

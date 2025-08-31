@@ -4,8 +4,8 @@ const Jogo = (props) =>
 {
     return (
 
-        <section className="sectionJogo">
-            <h3>{props.nome}</h3>
+        <section className="sectionJogo" style={{backgroundColor: props.corPrimaria}}>
+            <h3 style={{ borderColor: props.corSecundaria}}>{props.nome}</h3>
         </section>
     )
 }

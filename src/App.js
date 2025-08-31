@@ -3,6 +3,50 @@ import Banner from './componentes/Banner/Banner';
 import Formulario from './componentes/Formulario/Formulario';
 import Jogo from './componentes/Jogo/Jogo'
 
+const jogos = [
+  {
+    nome: 'Xadrez',
+    corPrimaria: '#D9F7E9',
+    corSecundaria: '#57C278'
+  },
+
+  {
+    nome: 'Damas',
+    corPrimaria: '#E8F8FF',
+    corSecundaria: '#82CFFA'
+  },
+
+  {
+    nome: 'Detetive',
+    corPrimaria: '#F0F8E2',
+    corSecundaria: '#A6D157'
+  },
+
+  {
+    nome: 'Banco Imobiliário',
+    corPrimaria: '#FDE7E8',
+    corSecundaria: '#E06B69'
+  },
+
+  {
+    nome: 'RPG',
+    corPrimaria: '#FAE9F5',
+    corSecundaria: '#DB6EBF'
+  },
+
+  {
+    nome: 'Monopoly',
+    corPrimaria: '#FFF5D9',
+    corSecundaria: '#FFBA05'
+  },
+
+  {
+    nome: 'Baralho',
+    corPrimaria: '#FFEEDF',
+    corSecundaria: '#FF8A29'
+  }
+]
+
 function App() {
   const [colaboradores, setColaborades] = useState([])
   const aoNovoColaboradorAdcionado = (colaborador) => {
@@ -11,9 +55,10 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdcionado(colaborador)} />
-      <Jogo nome="Xadrez" />
-      <Jogo nome="Damas"/>
+      <Formulario listaDeJogos={jogos} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdcionado(colaborador)} />
+
+      {jogos.map(jogo => <Jogo key={jogo.nome} nome={jogo.nome} corPrimaria={jogo.corPrimaria} corSecundaria={jogo.corSecundaria} />)} 
+
     </div>
   );
 }
