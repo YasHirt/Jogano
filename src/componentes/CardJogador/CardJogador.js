@@ -1,14 +1,14 @@
 import './cardJogador.css'
 
-const CardJogador = () =>
+const CardJogador = (props) =>
 {
     return (
         <div className='jogador'>
             <div className='cabecalho'>
-                <img src='https://github.com/YasHirt.png' alt='Foto  da Jogadora'/>
+                <img src={props.imagem} alt='Foto  da Jogadora'/>
             </div>
             <div className='rodape'>
-                <h4> Yasmin Hirt</h4>
+                <h4> {props.nome}</h4>
                 <h5>Sempre quer fazer competição de cubo mágico (mas ninguém aceita) </h5>
             </div>
 
@@ -18,3 +18,5 @@ const CardJogador = () =>
 }
 
 export default CardJogador
+
+                // 'https://github.com/YasHirt.png'

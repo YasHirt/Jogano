@@ -28,7 +28,6 @@ const Formulario = (props) => {
                 <Botao>
                     Criar Botão
                 </Botao>
-                <h3>Meu teste de variável</h3>
 
             </form>
         </section>

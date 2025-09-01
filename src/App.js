@@ -49,6 +49,7 @@ const jogos = [
 ]
 
 function App() {
+  
   const [colaboradores, setColaborades] = useState([])
   const aoNovoColaboradorAdcionado = (colaborador) => {
     setColaborades([...colaboradores, colaborador])
@@ -58,9 +59,15 @@ function App() {
       <Banner />
       <Formulario listaDeJogos={jogos.map(jogo => jogo.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdcionado(colaborador)} />
 
-      {jogos.map(jogo => <Jogo key={jogo.nome} nome={jogo.nome} corPrimaria={jogo.corPrimaria} corSecundaria={jogo.corSecundaria} />)} 
-      
-     
+      {jogos.map(jogo => <Jogo
+
+        key={jogo.nome}
+        nome={jogo.nome}
+        corPrimaria={jogo.corPrimaria}
+        corSecundaria={jogo.corSecundaria}
+        colaboradores={colaboradores} />)}
+
+
     </div>
   );
 }
