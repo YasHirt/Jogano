@@ -49,7 +49,7 @@ const jogos = [
 ]
 
 function App() {
-  
+
   const [colaboradores, setColaborades] = useState([])
   const aoNovoColaboradorAdcionado = (colaborador) => {
     setColaborades([...colaboradores, colaborador])
@@ -65,7 +65,7 @@ function App() {
         nome={jogo.nome}
         corPrimaria={jogo.corPrimaria}
         corSecundaria={jogo.corSecundaria}
-        colaboradores={colaboradores} />)}
+        colaboradores={colaboradores.filter(colaborador => colaborador.lista == jogo.nome)} />)}
 
 
     </div>

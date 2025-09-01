@@ -1,6 +1,7 @@
 .jogador {
     width: 280px;
     border-radius: 15px;
+    margin-bottom: 15px;
 }
 
 .jogador .cabecalho {
