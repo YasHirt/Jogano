@@ -60,7 +60,7 @@ function App() {
 
       {jogos.map(jogo => <Jogo key={jogo.nome} nome={jogo.nome} corPrimaria={jogo.corPrimaria} corSecundaria={jogo.corSecundaria} />)} 
       
-      <CardJogador/>
+     
     </div>
   );
 }

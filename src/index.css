@@ -15,6 +15,7 @@ code {
 *
 {
    box-sizing: border-box; /*Faz com que a largura e altura total do container contenham o padding */
-   overflow-x: hidden;
+   /* overflow-x: hidden; */
+  
   
 }
