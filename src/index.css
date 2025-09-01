@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -15,7 +18,10 @@ code {
 *
 {
    box-sizing: border-box; /*Faz com que a largura e altura total do container contenham o padding */
-   /* overflow-x: hidden; */
   
-  
+}
+:root
+{
+  --fonteTitulo: "Prata", serif;
+  --fontTextoCorrido: "Montserrat", sans-serif
 }

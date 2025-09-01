@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Banner from './componentes/Banner/Banner';
 import Formulario from './componentes/Formulario/Formulario';
 import Jogo from './componentes/Jogo/Jogo'
-import CardJogador from './componentes/CardJogador/CardJogador';
 
 const jogos = [
   {

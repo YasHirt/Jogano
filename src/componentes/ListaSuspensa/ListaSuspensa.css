@@ -16,3 +16,9 @@
     margin-bottom: 8px;
     font-size: 24px;
 }
+.ListaSuspensa option
+{
+    font-family: var(--fontTextoCorrido);
+    font-weight: 400;
+    font-style: normal;
+}

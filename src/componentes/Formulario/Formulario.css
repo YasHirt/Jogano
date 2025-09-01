@@ -6,11 +6,24 @@
     background-color: #F6F6F6;
     margin-top: 80px;
     width: 75%;
-    
+
 }
 
 .section-login {
-   display: flex;
-   justify-content: center;
+    display: flex;
+    justify-content: center;
 
+}
+
+.form-login h2 {
+    font-family: var(--fonteTitulo);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.form-login label, .form-login input::placeholder
+{
+    font-family: var(--fontTextoCorrido);
+    font-weight: 400;
+    font-style: normal;
 }

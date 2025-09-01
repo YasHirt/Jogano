@@ -4,10 +4,11 @@ import "./Jogo.css"
 const Jogo = (props) =>
 {
     return (
-        <section className="sectionJogo" style={{backgroundColor: props.corPrimaria}}>
+
+       props.colaboradores.length > 0 && <section className="sectionJogo" style={{backgroundColor: props.corPrimaria}}>
             <h3 style={{ borderColor: props.corSecundaria}}>{props.nome}</h3>
             <div className="colaboradoes"> 
-            {props.colaboradores.map(colaborador => <CardJogador nome={colaborador.nome} imagem={colaborador.imagem}/>)}
+            {props.colaboradores.map(colaborador => <CardJogador corCabecalho={props.corSecundaria} nome={colaborador.nome} imagem={colaborador.imagem}/>)}
             </div>
         </section>
     )

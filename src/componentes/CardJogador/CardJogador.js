@@ -4,7 +4,7 @@ const CardJogador = (props) =>
 {
     return (
         <div className='jogador'>
-            <div className='cabecalho'>
+            <div className='cabecalho' style={{backgroundColor: props.corCabecalho}}>
                 <img src={props.imagem} alt='Foto  da Jogadora'/>
             </div>
             <div className='rodape'>

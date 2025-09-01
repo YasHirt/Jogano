@@ -14,16 +14,19 @@ const Formulario = (props) => {
     const aoSalvar = (e) => {
         e.preventDefault()
         console.log("Documento salvo =>", nome, imagem, lista)
-        props.aoColaboradorCadastrado({nome, imagem, lista}) //envio um objeto literal JS
+        props.aoColaboradorCadastrado({ nome, imagem, lista }) //envio um objeto literal JS
+        setImagem('')
+        setLista('')
+        setNome('')
     }
-    
+
 
     return (
         <section className='section-login'>
             <form className='form-login' onSubmit={aoSalvar} >
                 <h2>Preencha os dados para criar o card do jogador.</h2>
                 <CampoTexto valor={nome} aoAlterado={setNome} label="Nome" obrigatorio={true} placeholder="Digite seu nome" />
-                <CampoTexto valor={imagem} aoAlterado= {setImagem} label="Imagem" placeholder="Informe o endereço da imagem" />
+                <CampoTexto valor={imagem} aoAlterado={setImagem} label="Imagem" placeholder="Informe o endereço da imagem" />
                 <ListaSuspensa valor={lista} aoAlterado={setLista} label="Jogos" obrigatorio={true} itens={props.listaDeJogos} />
                 <Botao>
                     Criar Botão
