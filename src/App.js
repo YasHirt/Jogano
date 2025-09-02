@@ -64,7 +64,7 @@ function App() {
         nome={jogo.nome}
         corPrimaria={jogo.corPrimaria}
         corSecundaria={jogo.corSecundaria}
-        colaboradores={colaboradores.filter(colaborador => colaborador.lista == jogo.nome)} />)}
+        colaboradores={colaboradores.filter(colaborador =>colaborador.lista == jogo.nome)} />)}
 
 
     </div>

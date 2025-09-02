@@ -10,14 +10,15 @@ const Formulario = (props) => {
     const [nome, setNome] = useState('') //hooks
     const [imagem, setImagem] = useState('')
     const [lista, setLista] = useState('')
+    const [descricao, setDescricao] = useState('')
 
     const aoSalvar = (e) => {
         e.preventDefault()
-        console.log("Documento salvo =>", nome, imagem, lista)
-        props.aoColaboradorCadastrado({ nome, imagem, lista }) //envio um objeto literal JS
+        props.aoColaboradorCadastrado({ nome, imagem, lista, descricao }) //envio um objeto literal JS
         setImagem('')
         setLista('')
         setNome('')
+        setDescricao('')
     }
 
 
@@ -26,6 +27,7 @@ const Formulario = (props) => {
             <form className='form-login' onSubmit={aoSalvar} >
                 <h2>Preencha os dados para criar o card do jogador.</h2>
                 <CampoTexto valor={nome} aoAlterado={setNome} label="Nome" obrigatorio={true} placeholder="Digite seu nome" />
+                <CampoTexto valor={descricao} aoAlterado={setDescricao} label="Descrição" placeholder="Conte um pouco sobre você"/>
                 <CampoTexto valor={imagem} aoAlterado={setImagem} label="Imagem" placeholder="Informe o endereço da imagem" />
                 <ListaSuspensa valor={lista} aoAlterado={setLista} label="Jogos" obrigatorio={true} itens={props.listaDeJogos} />
                 <Botao>
