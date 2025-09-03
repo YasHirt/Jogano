@@ -21,17 +21,17 @@ const Formulario = (props) => {
         setDescricao('')
     }
 
-
+//O evento é passado automáticcamente como parâmetro para aoSalvar porque é uma função callback de evento
     return (
         <section className='section-login'>
-            <form className='form-login' onSubmit={aoSalvar} >
+            <form className='form-login' onSubmit={aoSalvar} > 
                 <h2>Preencha os dados para criar o card do jogador.</h2>
                 <CampoTexto valor={nome} aoAlterado={setNome} label="Nome" obrigatorio={true} placeholder="Digite seu nome" />
                 <CampoTexto valor={descricao} aoAlterado={setDescricao} label="Descrição" placeholder="Conte um pouco sobre você"/>
                 <CampoTexto valor={imagem} aoAlterado={setImagem} label="Imagem" placeholder="Informe o endereço da imagem" />
                 <ListaSuspensa valor={lista} aoAlterado={setLista} label="Jogos" obrigatorio={true} itens={props.listaDeJogos} />
                 <Botao>
-                    Criar Botão
+                    Criar card
                 </Botao>
 
             </form>

@@ -53,6 +53,12 @@ function App() {
   const aoNovoColaboradorAdcionado = (colaborador) => {
     setColaborades([...colaboradores, colaborador])
   }
+
+  const DeletandoColaborador = () =>
+  {
+    console.log("Deletando colaborador" )
+  }
+
   return (
     <div className="App">
       <Banner />
@@ -64,6 +70,7 @@ function App() {
         nome={jogo.nome}
         corPrimaria={jogo.corPrimaria}
         corSecundaria={jogo.corSecundaria}
+        aoDeletar={DeletandoColaborador}
         colaboradores={colaboradores.filter(colaborador =>colaborador.lista == jogo.nome)} />)}
 
 

@@ -1,9 +1,11 @@
 import './cardJogador.css'
+import { TiDelete } from "react-icons/ti";
 
 const CardJogador = (props) =>
 {
     return (
         <div className='jogador'>
+            <TiDelete onClick={props.aoDeletar} className='botao-deletar'/>
             <div className='cabecalho' style={{backgroundColor: props.corCabecalho}}>
                 <img src={props.imagem} alt='Foto  da Jogadora'/>
             </div>
