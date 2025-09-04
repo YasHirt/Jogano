@@ -50,13 +50,14 @@ const jogos = [
 function App() {
 
   const [colaboradores, setColaborades] = useState([])
+
   const aoNovoColaboradorAdcionado = (colaborador) => {
     setColaborades([...colaboradores, colaborador])
   }
 
-  const DeletandoColaborador = () =>
+  const DeletandoColaborador = (id) =>
   {
-    console.log("Deletando colaborador" )
+    setColaborades(colaboradores.filter(colaborador => colaborador.id !== id))
   }
 
   return (
@@ -70,7 +71,7 @@ function App() {
         nome={jogo.nome}
         corPrimaria={jogo.corPrimaria}
         corSecundaria={jogo.corSecundaria}
-        aoDeletar={DeletandoColaborador}
+        aoDeletar={id => DeletandoColaborador(id)}
         colaboradores={colaboradores.filter(colaborador =>colaborador.lista == jogo.nome)} />)}
 
 

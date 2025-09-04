@@ -14,7 +14,7 @@ const Formulario = (props) => {
 
     const aoSalvar = (e) => {
         e.preventDefault()
-        props.aoColaboradorCadastrado({ nome, imagem, lista, descricao }) //envio um objeto literal JS
+        props.aoColaboradorCadastrado({ nome, imagem, lista, descricao, id: Date.now() }) //envio um objeto literal JS
         setImagem('')
         setLista('')
         setNome('')

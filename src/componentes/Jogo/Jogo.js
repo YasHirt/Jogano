@@ -10,7 +10,7 @@ const Jogo = (props) =>
             <div className="colaboradoes"> 
             {props.colaboradores.map(colaborador => {
                 console.log("Renderizando colaborador")
-                return <CardJogador key={colaborador.nome} aoDeletar={props.aoDeletar} corCabecalho={props.corSecundaria} nome={colaborador.nome} imagem={colaborador.imagem} descricao={colaborador.descricao}/>
+                return <CardJogador key={colaborador.nome} aoDeletar={()=> props.aoDeletar(colaborador.id)} corCabecalho={props.corSecundaria} nome={colaborador.nome} imagem={colaborador.imagem} descricao={colaborador.descricao}/>
             })}
             
             </div>
