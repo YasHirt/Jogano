@@ -3,7 +3,10 @@ import Banner from './componentes/Banner/Banner';
 import Formulario from './componentes/Formulario/Formulario';
 import Jogo from './componentes/Jogo/Jogo'
 
-const jogos = [
+function App() {
+
+  
+const [jogos, setJogos] = useState([
   {
     nome: 'Xadrez',
     corPrimaria: '#D9F7E9',
@@ -45,11 +48,18 @@ const jogos = [
     corPrimaria: '#FFEEDF',
     corSecundaria: '#FF8A29'
   }
-]
-
-function App() {
-
+])
   const [colaboradores, setColaborades] = useState([])
+
+  const mudarCorDoTime = (cor, nome) =>
+  {
+    setJogos(jogos.map( jogo => 
+      {if(jogo.nome === nome)
+        jogo.corSecundaria = cor
+        return jogo
+      }
+    ))
+  }
 
   const aoNovoColaboradorAdcionado = (colaborador) => {
     setColaborades([...colaboradores, colaborador])
@@ -72,6 +82,7 @@ function App() {
         corPrimaria={jogo.corPrimaria}
         corSecundaria={jogo.corSecundaria}
         aoDeletar={id => DeletandoColaborador(id)}
+        mudarCor={mudarCorDoTime}
         colaboradores={colaboradores.filter(colaborador =>colaborador.lista == jogo.nome)} />)}
 
 
