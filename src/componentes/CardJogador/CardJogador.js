@@ -3,6 +3,7 @@ import { TiDelete } from "react-icons/ti";
 
 const CardJogador = (props) =>
 {
+    //quando tiDelete for clicado, aoDeletar será executado
     return (
         <div className='jogador'>
             <TiDelete onClick={props.aoDeletar} className='botao-deletar'/>

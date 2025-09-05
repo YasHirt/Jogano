@@ -2,59 +2,66 @@ import { useState } from 'react';
 import Banner from './componentes/Banner/Banner';
 import Formulario from './componentes/Formulario/Formulario';
 import Jogo from './componentes/Jogo/Jogo'
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
-  
 const [jogos, setJogos] = useState([
   {
     nome: 'Xadrez',
     corPrimaria: '#D9F7E9',
-    corSecundaria: '#57C278'
+    corSecundaria: '#57C278',
+    idJogo: uuidv4()
   },
 
   {
     nome: 'Damas',
     corPrimaria: '#E8F8FF',
-    corSecundaria: '#82CFFA'
+    corSecundaria: '#82CFFA',
+    idJogo: uuidv4()
   },
 
   {
     nome: 'Detetive',
     corPrimaria: '#F0F8E2',
-    corSecundaria: '#A6D157'
+    corSecundaria: '#A6D157',
+    idJogo: uuidv4()
   },
 
   {
     nome: 'Banco Imobiliário',
     corPrimaria: '#FDE7E8',
-    corSecundaria: '#E06B69'
+    corSecundaria: '#E06B69',
+    idJogo: uuidv4()
   },
 
   {
     nome: 'RPG',
     corPrimaria: '#FAE9F5',
-    corSecundaria: '#DB6EBF'
+    corSecundaria: '#DB6EBF',
+    idJogo: uuidv4()
   },
 
   {
     nome: 'Monopoly',
     corPrimaria: '#FFF5D9',
-    corSecundaria: '#FFBA05'
+    corSecundaria: '#FFBA05',
+    idJogo: uuidv4()
   },
 
   {
     nome: 'Baralho',
     corPrimaria: '#FFEEDF',
-    corSecundaria: '#FF8A29'
+    corSecundaria: '#FF8A29',
+    idJogo: uuidv4()
   }
 ])
   const [colaboradores, setColaborades] = useState([])
 
-  const mudarCorDoTime = (cor, nome) =>
+  const mudarCorDoTime = (cor, idJogo) =>
   {
     setJogos(jogos.map( jogo => 
-      {if(jogo.nome === nome)
+      {if(jogo.idJogo === idJogo)
         jogo.corSecundaria = cor
         return jogo
       }
@@ -83,6 +90,7 @@ const [jogos, setJogos] = useState([
         corSecundaria={jogo.corSecundaria}
         aoDeletar={id => DeletandoColaborador(id)}
         mudarCor={mudarCorDoTime}
+        idJogo={jogo.idJogo}
         colaboradores={colaboradores.filter(colaborador =>colaborador.lista == jogo.nome)} />)}
 
 
