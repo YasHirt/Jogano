@@ -8,49 +8,49 @@ function App() {
 
 const [jogos, setJogos] = useState([
   {
-    nome: 'Xadrez',
+    nomeJogo: 'Xadrez',
     corPrimaria: '#D9F7E9',
     corSecundaria: '#57C278',
     idJogo: uuidv4()
   },
 
   {
-    nome: 'Damas',
+    nomeJogo: 'Damas',
     corPrimaria: '#E8F8FF',
     corSecundaria: '#82CFFA',
     idJogo: uuidv4()
   },
 
   {
-    nome: 'Detetive',
+    nomeJogo: 'Detetive',
     corPrimaria: '#F0F8E2',
     corSecundaria: '#A6D157',
     idJogo: uuidv4()
   },
 
   {
-    nome: 'Banco Imobiliário',
+    nomeJogo: 'Banco Imobiliário',
     corPrimaria: '#FDE7E8',
     corSecundaria: '#E06B69',
     idJogo: uuidv4()
   },
 
   {
-    nome: 'RPG',
+    nomeJogo: 'RPG',
     corPrimaria: '#FAE9F5',
     corSecundaria: '#DB6EBF',
     idJogo: uuidv4()
   },
 
   {
-    nome: 'Monopoly',
+    nomeJogo: 'Monopoly',
     corPrimaria: '#FFF5D9',
     corSecundaria: '#FFBA05',
     idJogo: uuidv4()
   },
 
   {
-    nome: 'Baralho',
+    nomeJogo: 'Baralho',
     corPrimaria: '#FFEEDF',
     corSecundaria: '#FF8A29',
     idJogo: uuidv4()
@@ -77,21 +77,26 @@ const [jogos, setJogos] = useState([
     setColaborades(colaboradores.filter(colaborador => colaborador.id !== id))
   }
 
+  const AdcionarNovoJogo = (novoJogo) =>
+  {
+    setJogos([...jogos, novoJogo])
+  }
+
   return (
     <div className="App">
       <Banner />
-      <Formulario listaDeJogos={jogos.map(jogo => jogo.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdcionado(colaborador)} />
+      <Formulario listaDeJogos={jogos.map(jogo => jogo.nomeJogo)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdcionado(colaborador)} adcionarNovoJogo={novoJogo => AdcionarNovoJogo(novoJogo)} />
 
       {jogos.map(jogo => <Jogo
 
-        key={jogo.nome}
-        nome={jogo.nome}
+        key={jogo.nomeJogo}
+        nome={jogo.nomeJogo}
         corPrimaria={jogo.corPrimaria}
         corSecundaria={jogo.corSecundaria}
         aoDeletar={id => DeletandoColaborador(id)}
         mudarCor={mudarCorDoTime}
         idJogo={jogo.idJogo}
-        colaboradores={colaboradores.filter(colaborador =>colaborador.lista == jogo.nome)} />)}
+        colaboradores={colaboradores.filter(colaborador =>colaborador.lista == jogo.nomeJogo)} />)}
 
 
     </div>

@@ -1,6 +1,7 @@
 .sectionJogo
 {
     text-align: center;
+    background-image: url('/public/imagens/fundo.png')
 }
 .sectionJogo h3
 {

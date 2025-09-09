@@ -5,14 +5,15 @@
     padding: 36px 34px;
     background-color: #F6F6F6;
     margin-top: 80px;
-    width: 75%;
+    max-width: 75%;
 
 }
 
 .section-login {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-bottom: 30px;
+
 
 }
 
