@@ -10,8 +10,15 @@ const Jogo = (props) =>
             <h3 style={{ borderColor: props.corSecundaria}}>{props.nome}</h3>
             <div className="colaboradoes"> 
             {props.colaboradores.map(colaborador => {
-                console.log("Renderizando colaborador")
-                return <CardJogador key={colaborador.nome} aoDeletar={()=> props.aoDeletar(colaborador.id)} corCabecalho={props.corSecundaria} nome={colaborador.nome} imagem={colaborador.imagem} descricao={colaborador.descricao}/>
+                return <CardJogador
+                id={colaborador.id} 
+                key={colaborador.nome}
+                aoDeletar={()=> props.aoDeletar(colaborador.id)}
+                corCabecalho={props.corSecundaria}
+                nome={colaborador.nome} imagem={colaborador.imagem}
+                descricao={colaborador.descricao} 
+                favorito={colaborador.favorito}
+                favoritar={id => props.favoritarColaborador(id)} />
             })}
             
             </div>

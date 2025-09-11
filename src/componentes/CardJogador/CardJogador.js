@@ -1,5 +1,6 @@
 import './cardJogador.css'
 import { TiDelete } from "react-icons/ti";
+import { HiMiniHeart, HiOutlineHeart } from "react-icons/hi2";
 
 const CardJogador = (props) =>
 {
@@ -7,8 +8,11 @@ const CardJogador = (props) =>
     return (
         <div className='jogador'>
             <TiDelete onClick={props.aoDeletar} className='botao-deletar'/>
+             <div className='favoritar' onClick={() => props.favoritar(props.id)}> 
+                {props.favorito ? <HiMiniHeart/> : <HiOutlineHeart/>}
+             </div>
             <div className='cabecalho' style={{backgroundColor: props.corCabecalho}}>
-                <img src={props.imagem} alt='Foto  da Jogadora'/>
+                <img src={props.imagem} alt='Foto do jogador'/>
             </div>
             <div className='rodape'>
                 <h4> {props.nome}</h4>
@@ -19,7 +23,5 @@ const CardJogador = (props) =>
 
     )
 }
-
 export default CardJogador
 
-                // 'https://github.com/YasHirt.png'

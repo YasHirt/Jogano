@@ -72,6 +72,18 @@ const [jogos, setJogos] = useState([
     setColaborades([...colaboradores, colaborador])
   }
 
+  const favoritarColaborador = (id) =>
+  {
+    setColaborades(colaboradores.map(colaborador =>  
+    {
+    {if(colaborador.id === id)
+       return {...colaborador, favorito: !colaborador.favorito}
+    }
+      return colaborador
+   }
+    ))
+  }
+
   const DeletandoColaborador = (id) =>
   {
     setColaborades(colaboradores.filter(colaborador => colaborador.id !== id))
@@ -96,6 +108,7 @@ const [jogos, setJogos] = useState([
         aoDeletar={id => DeletandoColaborador(id)}
         mudarCor={mudarCorDoTime}
         idJogo={jogo.idJogo}
+        favoritarColaborador={favoritarColaborador}
         colaboradores={colaboradores.filter(colaborador =>colaborador.lista == jogo.nomeJogo)} />)}
 
 

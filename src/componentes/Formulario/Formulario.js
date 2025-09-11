@@ -13,12 +13,12 @@ const Formulario = (props) => {
     const [descricao, setDescricao] = useState('')
 
     const [nomeJogo, setNomeNovoJogo] = useState('')
-    const [corSecundaria, setcorNovoJogo] = useState('')
+    const [corSecundaria, setcorNovoJogo] = useState('#000000')
     
 
     const aoSalvar = (e) => {
         e.preventDefault()
-        props.aoColaboradorCadastrado({ nome, imagem, lista, descricao, id: uuidv4() }) //envio um objeto literal JS
+        props.aoColaboradorCadastrado({ nome, imagem, lista, descricao, id: uuidv4(), favorito: false }) //envio um objeto literal JS
         setImagem('')
         setLista('')
         setNome('')
