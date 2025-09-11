@@ -11,7 +11,6 @@ const Jogo = (props) =>
             <div className="colaboradoes"> 
             {props.colaboradores.map(colaborador => {
                 console.log("Renderizando colaborador")
-                //colaborador.id nao foi passado com parametro, então usamos a função anonina
                 return <CardJogador key={colaborador.nome} aoDeletar={()=> props.aoDeletar(colaborador.id)} corCabecalho={props.corSecundaria} nome={colaborador.nome} imagem={colaborador.imagem} descricao={colaborador.descricao}/>
             })}
             

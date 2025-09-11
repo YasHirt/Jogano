@@ -1,9 +1,8 @@
 import './Formulario.css'
-import '../CampoTexto/CampoTexto'
-import CampoTexto from '../CampoTexto/CampoTexto';
+import Campo from '../Campo/Campo';
 import ListaSuspensa from '../ListaSuspensa/ListaSuspensa';
 import Botao from '../Botao/Botao';
-import { use, useState } from 'react';
+import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 const Formulario = (props) => {
@@ -39,9 +38,9 @@ const Formulario = (props) => {
         <section className='section-login'>
             <form className='form-login' onSubmit={aoSalvar} > 
                 <h2>Preencha os dados para criar o card do jogador.</h2>
-                <CampoTexto valor={nome} aoAlterado={setNome} label="Nome" obrigatorio={true} placeholder="Digite seu nome" />
-                <CampoTexto valor={descricao} aoAlterado={setDescricao} label="Descrição" placeholder="Conte um pouco sobre você"/>
-                <CampoTexto valor={imagem} aoAlterado={setImagem} label="Imagem" placeholder="Informe o endereço da imagem" />
+                <Campo valor={nome} aoAlterado={setNome} label="Nome" obrigatorio={true} placeholder="Digite seu nome" />
+                <Campo valor={descricao} aoAlterado={setDescricao} label="Descrição" placeholder="Conte um pouco sobre você"/>
+                <Campo valor={imagem} aoAlterado={setImagem} label="Imagem" placeholder="Informe o endereço da imagem" />
                 <ListaSuspensa valor={lista} aoAlterado={setLista} label="Jogos" obrigatorio={true} itens={props.listaDeJogos} />
                 <Botao>
                     Criar card
@@ -49,8 +48,8 @@ const Formulario = (props) => {
             </form>
               <form className='form-login' onSubmit={aoSalvarNovoJogo} > 
                 <h2>Preencha os dados para criar o um novo time</h2>
-                <CampoTexto valor={nomeJogo} aoAlterado={setNomeNovoJogo} label="Nome do novo jogo" obrigatorio={true} placeholder="Digite o nome do novo jogo" />
-                <CampoTexto valor={corSecundaria} aoAlterado={setcorNovoJogo} label="Cor do novo jogo" obrigatorio={true} placeholder="Digite o código da cor do novo jogo"/>
+                <Campo valor={nomeJogo} aoAlterado={setNomeNovoJogo} label="Nome do novo jogo" obrigatorio={true} placeholder="Digite o nome do novo jogo" />
+                <Campo type="color" valor={corSecundaria} aoAlterado={setcorNovoJogo} label="Cor do novo jogo" obrigatorio={true} placeholder="Digite o código da cor do novo jogo"/>
                 <Botao>
                     Criar novo jogo
                 </Botao>

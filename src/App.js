@@ -85,7 +85,7 @@ const [jogos, setJogos] = useState([
   return (
     <div className="App">
       <Banner />
-      <Formulario listaDeJogos={jogos.map(jogo => jogo.nomeJogo)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdcionado(colaborador)} adcionarNovoJogo={novoJogo => AdcionarNovoJogo(novoJogo)} />
+      <Formulario listaDeJogos={jogos.map(jogo => jogo.nomeJogo)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdcionado(colaborador)} adcionarNovoJogo={AdcionarNovoJogo} />
 
       {jogos.map(jogo => <Jogo
 
