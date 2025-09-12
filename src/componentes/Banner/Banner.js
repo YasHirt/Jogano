@@ -3,7 +3,7 @@ function Banner() {
     return (
       //JSX
       <header className='Banner'> 
-        <img src="/imagens/bannerJogano.png" alt="Banner principal"></img>
+        <img src="/imagens/banner.png" alt="Banner principal"></img>
       </header>
     )
 }

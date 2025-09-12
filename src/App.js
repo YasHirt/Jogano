@@ -76,11 +76,12 @@ const [jogos, setJogos] = useState([
   {
     setColaborades(colaboradores.map(colaborador =>  
     {
-    {if(colaborador.id === id)
-       return {...colaborador, favorito: !colaborador.favorito}
+      if(colaborador.id === id) 
+      {
+        return {...colaborador, favorito: !colaborador.favorito}
+      }
+        return colaborador  
     }
-      return colaborador
-   }
     ))
   }
 
@@ -110,6 +111,17 @@ const [jogos, setJogos] = useState([
         idJogo={jogo.idJogo}
         favoritarColaborador={favoritarColaborador}
         colaboradores={colaboradores.filter(colaborador =>colaborador.lista == jogo.nomeJogo)} />)}
+
+      
+      <Jogo
+      key={"favoritos"}
+      nome={"Favoritos"}
+      corPrimaria={'#A1E3F9'}
+      corSecundaria={'#3674B5'}
+      favoritarColaborador={favoritarColaborador}
+      colaboradores={colaboradores.filter(colaborador => colaborador.favorito)} />
+
+
 
 
     </div>

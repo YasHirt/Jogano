@@ -18,6 +18,7 @@ code {
 *
 {
    box-sizing: border-box; /*Faz com que a largura e altura total do container contenham o padding */
+    margin: 0;
   
 }
 :root

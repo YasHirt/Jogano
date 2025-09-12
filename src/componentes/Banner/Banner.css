@@ -1,10 +1,29 @@
 
 .Banner
 {
-    background-color: #2F80ED;
+    background-color: #ADD8E6;
     text-align: center;
 }
 .Banner img 
 {
-    max-width:50%;
+    max-width: 60%;
+    border-radius: 20px;
+    margin-top: 50px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    animation: flutuar 4s ease-in-out infinite;
+
+}
+@keyframes flutuar {
+   0% {
+        transform: translateY(0px);
+        box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4);
+    }
+    50% {
+        transform: translateY(-15px);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* sombra mais suave e menor */
+    }
+    100% {
+        transform: translateY(0px);
+        box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4);
+    }
 }

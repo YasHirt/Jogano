@@ -1,16 +1,19 @@
 import CardJogador from "../CardJogador/CardJogador"
 import "./Jogo.css"
+import { FaStar } from "react-icons/fa";
 
 const Jogo = (props) =>
 {
     return (
 
-       props.colaboradores.length > 0 && <section className="sectionJogo" style={{backgroundColor: props.corPrimaria}}>
+       props.colaboradores.length > 0 && <section className="sectionJogo"
+        style={{backgroundColor: props.corPrimaria}}>
             <input type="color" onChange={e => props.mudarCor(e.target.value, props.idJogo)} value={props.corSecundaria} className="input-cor"/>
-            <h3 style={{ borderColor: props.corSecundaria}}>{props.nome}</h3>
+            {props.nome == "Favoritos" ? <h3 style={{borderColor: props.corSecundaria}}><FaStar/> {props.nome} <FaStar/></h3> :<h3 style={{ borderColor: props.corSecundaria}}>{props.nome}</h3>}
             <div className="colaboradoes"> 
             {props.colaboradores.map(colaborador => {
                 return <CardJogador
+                jogo={props.nome}
                 id={colaborador.id} 
                 key={colaborador.nome}
                 aoDeletar={()=> props.aoDeletar(colaborador.id)}

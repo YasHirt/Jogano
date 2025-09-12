@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 .sectionJogo
 {
     text-align: center;
@@ -5,10 +6,12 @@
 }
 .sectionJogo h3
 {
+    font-family: "Pixelify Sans", sans-serif;
     font-size: 2rem;
     border-bottom: 4px solid;
     display: inline-block;
     padding-bottom: 3px;
+    margin-top: 20px;
 }
 .colaboradoes
 {

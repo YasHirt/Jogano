@@ -60,3 +60,12 @@
 {
     cursor: pointer;
 }
+.card-jogador
+{
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-jogador:hover {
+  transform: scale(1.05); /* aumenta 5% */
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.3); /* sombra maior */
+}
